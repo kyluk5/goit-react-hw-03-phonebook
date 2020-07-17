@@ -1,0 +1,24 @@
+.title {
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+    border: 1px solid black;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.input_name {
+    margin: 10px;
+}
+
+.input_number {
+    margin: 10px;
+}
+
+.submit_btn {
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 10px;
+}

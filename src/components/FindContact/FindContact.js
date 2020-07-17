@@ -1,24 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from "../FindContact/FindContact.module.css";
 
 const FindContact = ({ filtered, filterValue, deleteContact }) => {
   return (
-    <>
+    <div className={style["search_info"]}>
       <h3>Contacts</h3>
       <span>Find contacts by name</span>
       <br></br>
       <input type="text" onChange={filterValue}></input>
-      <ul>
+      <ul className={style["contact_list"]}>
         {filtered.map((item) => (
-          <li key={item.id}>
+          <li className={style["contact_item"]} key={item.id}>
             {item.name} : {item.number}
-            <button type="button" id={item.id} onClick={deleteContact}>
+            <button
+              className={style["delete_btn"]}
+              type="button"
+              id={item.id}
+              onClick={deleteContact}
+            >
               Delete
             </button>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from "../PhoneForm/PhoneForm.module.css";
 
 const PhoneForm = ({
   submitForm,
@@ -10,11 +11,12 @@ const PhoneForm = ({
 }) => {
   return (
     <>
-      <h2>Phonebook</h2>
-      <form onSubmit={submitForm}>
+      <h2 className={style["title"]}>Phonebook</h2>
+      <form className={style["form"]} onSubmit={submitForm}>
         <span>Name</span>
         <br></br>
         <input
+          className={style["input_name"]}
           type="text"
           name="name"
           value={name}
@@ -24,13 +26,16 @@ const PhoneForm = ({
         <span>Number</span>
         <br></br>
         <input
+          className={style["input_number"]}
           type="text"
           name="number"
           value={number}
           onChange={contactNumber}
         ></input>
         <br></br>
-        <button type="submit">Add contact</button>
+        <button className={style["submit_btn"]} type="submit">
+          Add contact
+        </button>
       </form>
     </>
   );
